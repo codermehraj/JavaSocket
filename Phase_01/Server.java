@@ -20,8 +20,8 @@ public class Server {
 
         Socket client = listener.accept();
         System.out.println("[SERVER] A client is connected");
-        PrintWriter out = new PrintWriter(client.getOutputStream());
-        out.println("Connected to the server");
+        PrintWriter out = new PrintWriter(client.getOutputStream(), true);
+        out.println("[SERVER] Congrats! Connected to the server");
 
         System.out.println("[SERVER] single interaction done. Server closed!");
 
